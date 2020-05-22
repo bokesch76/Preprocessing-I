@@ -127,6 +127,32 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+.linkDisplay {
+  color: black;
+  text-decoration: none;
+  font-size: 1.75rem;
+}
+.buttonDisplay {
+  background: red;
+  color: white;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+.buttonDisplay:hover {
+  color: black;
+  background: yellow;
+}
+.h3Display {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.h5Display {
+  font-size: 1.75rem;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
 * {
   box-sizing: border-box;
 }
@@ -139,9 +165,9 @@ body {
 }
 .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
-  max-width: 800px;
+  align-items: end;
+  max-width: 90%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -154,8 +180,9 @@ body {
 }
 .container2 {
   display: flex;
-  justify-content: start;
-  max-width: 800px;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 90%;
   margin: 0 auto;
   background: lightgray;
 }
@@ -166,16 +193,18 @@ body {
 }
 .container2 address {
   display: flex;
+  flex-direction: column;
   font-size: 2rem;
   margin: 0 auto;
   margin-top: 40px;
+  line-height: 1.5;
 }
 .title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: lightgray;
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
   line-spacing: 1.5;
 }
@@ -183,18 +212,21 @@ body {
   font-weight: bold;
   font-size: 5rem;
   margin: 0 auto;
+  color: black;
 }
 .title h4 {
   font-style: italic;
-  margin-left: 60px;
-  margin-top: 5px;
-  font-size: 2rem;
+  margin-left: 70px;
+  margin-top: 10px;
+  font-size: 2.25rem;
+  margin-bottom: 10px;
 }
 .title h5 {
   font-size: 1.75rem;
   margin-left: 30px;
   margin-right: 20px;
   margin-bottom: 10px;
+  line-height: 1.25;
 }
 .title button {
   background: red;
@@ -203,4 +235,36 @@ body {
   font-size: 1.5rem;
   margin-left: 30px;
   margin-bottom: 20px;
+}
+.title button:hover {
+  color: black;
+  background: yellow;
+}
+.container3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 90%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.container3 h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+.container3 p {
+  @text Color;
+  max-width: 45%;
+  margin-top: 10px;
+  font-size: 1.75rem;
+}
+.container3 .skills {
+  @text Color;
+  max-width: 45%;
+}
+.container3 ul {
+  @text Color;
+  max-width: 45%;
+  margin-top: 10px;
 }
