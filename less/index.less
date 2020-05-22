@@ -121,13 +121,19 @@ html, body {
     font-weight: bold;
     padding: 20px;
   }
+  @media(max-width: 500px){
+    justify-content: center;
+    background: red;
+    .header a {
+      padding: 10px;
+    } 
+  }
 }
-
 .container2 {
  .containerDisplay(flex-start, center);
   margin: 0 auto;
   background: lightgray;
-  
+
   img {
     margin-left: 30px;
     margin-top: 40px;
@@ -141,6 +147,27 @@ html, body {
     margin-top: 40px;
     line-height: 1.5;
   }
+  @media(max-width: 500px){
+      .containerDisplay(flex-start, center);
+      flex-wrap: wrap;
+      margin: 0 auto;
+      padding: 10px;
+      background: teal;
+      color: white;
+      
+      .introPic img {
+        width: 80%;
+        margin: 0 auto;
+      } 
+      .introPic {
+        width: 60%;
+      }
+      address {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+      }
+  }
 }
   .title {
    display: flex;
@@ -149,8 +176,7 @@ html, body {
     background: lightgray;
     max-width: 80%;
     margin: 0 auto;
-    line-spacing: 1.5;
-    
+  
     h1 {
       font-weight: bold;
       font-size: 5rem;
@@ -166,18 +192,43 @@ html, body {
     }
     h5 {
       .h5Display;
+      line-height: 1.5;
     }
     button {
      .buttonDisplay;
      margin-left: 30px;
      margin-bottom: 20px;  
     }
-}
+    @media(max-width: 500px){
+      align-items: flex-start;
+      max-width: 80%;
+      background: teal;
+      color: white;
+      
+      h1 {
+        font-size: 2.70rem;
+        text-align: center;
+        color: yellow;
+        margin-bottom: 10px;
+      }
+      h4 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.9rem;
+      }
+      h5 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+    }
+  }
+ 
 .container3 {
   .containerDisplay(space-evenly, center);
   margin: 0 auto;
   .aboutMe{
     width: 45%;
+    margin: 0 auto;
   
   h3 {
     .h3Display;
@@ -197,17 +248,14 @@ html, body {
   }
   }
   .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     @textColor;
     width: 45%;
-    font-size: 1.75rem;
-    margin: 10 auto;
     h3 {
       .h3Display;
       text-decoration: underline;
-      margin-left: 5px;
+      margin-left: 10px;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
   ul {
     @textColor;
@@ -217,8 +265,15 @@ html, body {
     li {
       @textColor;
       padding: 5px;
+      font-size: 1.75rem;
     }
 }
+  @media(max-width: 500px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+  }
 }
 .container4 {
   .containerDisplay(flex-start, start);
@@ -259,6 +314,7 @@ html, body {
   margin-top: 20px;
   max-width: 80%;
   margin: 0 auto;
+  margin-top: 20px;
   
   h4 {
     font-size: 1.9rem;
