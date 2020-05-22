@@ -58,12 +58,17 @@ table {
   display: flex;
   justify-content: @justify;
   align-items: @align;
-  max-width: 90%;
+  max-width: 80%;
 }
 .linkDisplay {
-  color: @linkColor;
+  color: white;
   text-decoration: none;
   font-size: 1.75rem;
+  
+  &:hover {
+   background: yellow;
+    color: @textColor;
+  }
 }
 
 .buttonDisplay {
@@ -71,10 +76,13 @@ table {
   color: white;
   padding: 15px;
   font-size: 1.5rem;
+  border-radius: 50px;
   
   &:hover {
     color: black;
-    background: yellow;
+    background: orange;
+    font-weight: bold;
+    font-size: 1.75rem;
   }
 }
 .h3Display {
@@ -101,9 +109,12 @@ html, body {
     height: 100%;
 }
 .container {
-  .containerDisplay(flex-end, end);
+  .containerDisplay(flex-end, center);
+  margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 10px;
+  background: teal;
   
     .header a{
     .linkDisplay;
@@ -136,7 +147,7 @@ html, body {
    flex-direction: column;
    justify-content: flex-start;
     background: lightgray;
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
     line-spacing: 1.5;
     
@@ -163,28 +174,112 @@ html, body {
     }
 }
 .container3 {
-  .containerDisplay(flex-start, center);
-  flex-wrap: wrap;
+  .containerDisplay(space-evenly, center);
+  margin: 0 auto;
+  .aboutMe{
+    width: 45%;
+  
+  h3 {
+    .h3Display;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  p {
+    @textColor;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 1.75rem;
+  }
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @textColor;
+    width: 45%;
+    font-size: 1.75rem;
+    margin: 10 auto;
+    h3 {
+      .h3Display;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+  ul {
+    @textColor;
+    margin-top: 10px;
+    padding: 3px;
+  }
+    li {
+      @textColor;
+      padding: 5px;
+    }
+}
+}
+.container4 {
+  .containerDisplay(flex-start, start);
+  flex-direction: column;
   margin: 0 auto;
   
   h3 {
     .h3Display;
-    text-decoration: underline; 
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-decoration: underline;
   }
-  p {
-    @textColor;
-    max-width: 45%;
-    margin-top: 10px;
+  table {
+    border: 4px solid black;
+    width: 100%;
+    margin: 0 auto;
+  }
+  tr {
+    border: 3px double lightgray;
+  }
+  th {
+    text-align: center;
+    vertical-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px;
+  }
+  td {
+    text-align: center;
+    vertical-align: center;
     font-size: 1.75rem;
-  }
-  .skills {
-    @textColor;
-    max-width: 45%;
-    
-  }
-  ul {
-    @textColor;
-    max-width: 45%;
-    margin-top: 10px;
+    padding: 5px;
   }
 }
+.footer {
+  background: teal;
+  margin-top: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  
+  h4 {
+    font-size: 1.9rem;
+    color: yellow;
+    text-align: center;
+    padding: 10px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  nav a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    
+    &:hover {
+      color: red;
+      background: white;
+      padding: 5px;
+    }
+    }
+  }
